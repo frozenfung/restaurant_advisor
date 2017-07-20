@@ -16,6 +16,11 @@ class Admin::RestaurantsController < ApplicationController
     redirect_to :action => :index
   end
 
+  def show
+    @restaurant = Restaurant.find(params[:id])
+  end
+
+
   protected
 
   def restaurant_params
