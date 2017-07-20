@@ -1,0 +1,14 @@
+<h3>Hello, Admin</h3>
+
+<ul>
+<% @restaurants.each do |restaurant| %>
+  <li>
+ 	  <%= restaurant.name %>
+
+    <%= link_to 'Show', :controller => 'admin/restaurants', :action => 'show', :id => restaurant %>
+    <%= link_to 'Edit', :controller => 'admin/restaurants', :action => 'edit', :id => restaurant %>
+    <%= link_to 'Delete', :controller => 'admin/restaurants', :action => 'destroy', :id => restaurant %>
+  </li>
+<% end %>
+</ul>
+<%= link_to 'New Restaurant', :controller => 'restaurants', :action => 'new' %>
