@@ -7,7 +7,7 @@
 
     <%= link_to 'Show', :controller => 'admin/restaurants', :action => 'show', :id => restaurant %>
     <%= link_to 'Edit', :controller => 'admin/restaurants', :action => 'edit', :id => restaurant %>
-    <%= link_to 'Delete', :controller => 'admin/restaurants', :action => 'destroy', :id => restaurant %>
+    <%= link_to 'Delete', admin_restaurant_path(restaurant),method: :delete, data:{ confirm:"Are you sure?"}, :id => restaurant %>
   </li>
 <% end %>
 </ul>

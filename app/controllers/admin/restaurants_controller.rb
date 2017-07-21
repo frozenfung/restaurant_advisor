@@ -31,6 +31,12 @@ class Admin::RestaurantsController < ApplicationController
     redirect_to :action => :show, :id => @restaurant
   end
 
+  def destroy
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.destroy
+    redirect_to :action => :index
+  end
+
 
 
 
