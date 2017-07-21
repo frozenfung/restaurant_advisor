@@ -1,0 +1,13 @@
+<h1>Welcome Restaurant Advisor</h1>
+
+
+<ul>
+<% @restaurants.each do |restaurant| %>
+  <li>
+    <h2><%= restaurant.name %></h2>
+    <%= image_tag(restaurant.image, :width => 250) %>
+    <%= restaurant.description %>
+    <%= link_to 'Read More', restaurant_path(restaurant) %>
+  </li>
+<% end %>
+</ul>
