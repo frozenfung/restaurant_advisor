@@ -3,6 +3,9 @@
 <%= f.text_field :name %> <br>
 <%= f.label :opening_hour, "Opening Hour" %>
 <%= f.text_field :opening_hour %> <br>
+<%= f.label :category_id, "Category" %>
+<%= f.select :category_id, Category.all.map{ |x| [x.name, x.id] }, :prompt => "Please Select" %><br>
+
 <%= f.label :tel, "Tel" %>
 <%= f.text_field :tel %> <br>
 <%= f.label :address, "Address" %>
