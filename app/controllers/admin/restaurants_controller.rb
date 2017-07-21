@@ -17,7 +17,7 @@ class Admin::RestaurantsController < ApplicationController
     redirect_to :action => :index
   end
 
-  def show    
+  def show
   end
 
   def edit
@@ -43,9 +43,7 @@ class Admin::RestaurantsController < ApplicationController
     params.require(:restaurant).permit(:name, :opening_hour, :tel, :address, :description, :image)
   end
 
-  def set_restaurant
-    @restaurant = Restaurant.find(params[:id])
-  end
+
 
 
 

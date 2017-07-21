@@ -10,5 +10,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def set_restaurant
+    @restaurant = Restaurant.find(params[:id])
+  end
+
 
 end
