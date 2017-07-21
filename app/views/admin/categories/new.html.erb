@@ -1,0 +1,5 @@
+<h3>Add New Category</h3>
+<%= form_for @category, :url => { :controller => 'admin/categories', :action => 'create' } do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <%= f.submit "Create" %>
+<% end %>

@@ -14,5 +14,8 @@ class ApplicationController < ActionController::Base
     @restaurant = Restaurant.find(params[:id])
   end
 
+  def set_category
+    @category = Category.find(params[:id])
+  end
 
 end

@@ -1,0 +1,5 @@
+<h3>Edit Category</h3>
+<%= form_for @category, :url => { :controller => 'admin/categories', :action => 'update' } do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <%= f.submit "Update" %>
+<% end %>
