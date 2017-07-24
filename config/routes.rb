@@ -9,7 +9,9 @@ Rails.application.routes.draw do
     resources :categories
   end
 
-  resources :restaurants
+  resources :restaurants do
+    resources :comments
+  end
 
   resources :categories do
     resources :restaurants, :controller => 'category_restaurants'

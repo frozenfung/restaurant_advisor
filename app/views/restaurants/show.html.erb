@@ -1,3 +1,21 @@
 <h3>Show Restaurant Information</h3>
 <%= render :partial => 'show' %>
+<hr>
+<h3>Restaurant Reviews</h3>
+  <% @restaurant.comments.each do|f| %>
+    <h4><%= f.comment %></h4>
+        <%= f.user.email %><br>
+        <%= time_ago_in_words(f.created_at) %> <br>
+    <% end %>
+
+
+
+<h3>Add comment</h3>
+  <%= form_for([@restaurant, @restaurant.comments.build]) do |f| %>
+  <%= f.text_area :comment %><br>
+  <%= f.submit %>
+  <% end %><br>
+
+
+
 <p><%= link_to 'Back to index', :controller => 'restaurants', :action => 'index' %></p>
