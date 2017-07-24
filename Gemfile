@@ -33,6 +33,12 @@ gem 'jbuilder', '~> 2.5'
 #使用者登入認證
 gem 'devise'
 
+#分頁
+gem 'kaminari'
+
+#假資料
+gem 'ffaker'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

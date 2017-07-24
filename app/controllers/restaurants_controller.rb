@@ -2,7 +2,8 @@ class RestaurantsController < ApplicationController
   before_action :set_restaurant, :only => [ :show ]
 
   def index
-    @restaurants = Restaurant.all
+
+    @restaurants = Restaurant.page(params[:page]).per(5)
   end
 
   def show
