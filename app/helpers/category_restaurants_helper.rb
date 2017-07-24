@@ -1,0 +1,2 @@
+module CategoryRestaurantsHelper
+end

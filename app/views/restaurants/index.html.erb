@@ -1,15 +1,22 @@
 <h1>Welcome Restaurant Advisor</h1>
 
 
+<h3>依分類瀏覽餐廳：</h3>
+  <% @categoires.each do |category| %>
+    <%= link_to category_restaurants_path(category) do %>
+      <p><%= category.name %></p>
+    <% end %>
+  <% end %>
 <ul>
-<% @restaurants.each do |restaurant| %>
-  <li>
-    <h2><%= restaurant.name %></h2>
-    <%= image_tag(restaurant.image, :width => 250) %>
-    <%= restaurant.description %>
-    <%= link_to 'Read More', restaurant_path(restaurant) %>
-  </li>
-<% end %>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <h2><%= restaurant.name %></h2>
+      <%= image_tag(restaurant.image, :width => 250) %>
+      <%= restaurant.category.name%>
+      <%= restaurant.description %>
+      <%= link_to 'Read More', restaurant_path(restaurant) %>
+    </li>
+  <% end %>
 </ul>
 
-<%= paginate @restaurants %>
+  <%= paginate @restaurants %>

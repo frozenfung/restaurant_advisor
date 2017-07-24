@@ -1,0 +1,14 @@
+<h1><%= @category.name %>列表</h1>
+
+<ul>
+<% @restaurants.each do |restaurant| %>
+	<li>
+    <%= restaurant.name %>
+    <%= image_tag(restaurant.image, :width => 250) %>
+	  <%= link_to 'show', category_restaurant_path(@category, restaurant) %>
+	</li>
+<% end %>
+
+</ul>
+
+	  <%= link_to 'back to index', root_path %>

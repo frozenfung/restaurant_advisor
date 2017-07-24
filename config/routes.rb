@@ -11,4 +11,8 @@ Rails.application.routes.draw do
 
   resources :restaurants
 
+  resources :categories do
+    resources :restaurants, :controller => 'category_restaurants'
+  end
+
 end
