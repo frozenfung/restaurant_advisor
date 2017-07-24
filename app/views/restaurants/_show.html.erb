@@ -1,7 +1,21 @@
-<h1>Restaurant Name<%= @restaurant.name %></h1>
+<h1><%= @restaurant.name %> Restaurant</h1>
 <p><%= image_tag(@restaurant.image) %></p>
 <p>Category: <%= @restaurant.category.name%>
 <p>Opening Hour<%= @restaurant.opening_hour %></p>
 <p>Tel<%= @restaurant.tel %></p>
 <p>Address<%= @restaurant.address %></p>
 <p>Description<%= @restaurant.description %></p>
+<hr>
+<h3>評論數: <%= @restaurant.comments.count %></h3>
+<h3>Restaurant Reviews</h3>
+  <% @restaurant.comments.each do|f| %>
+    <h4><%= f.comment %></h4>
+        <%= f.user.email %><br>
+        <%= time_ago_in_words(f.created_at) %> <br>
+    <% end %>
+
+<h3>Add comment</h3>
+  <%= form_for([@restaurant, @restaurant.comments.build]) do |f| %>
+  <%= f.text_area :comment %><br>
+  <%= f.submit %>
+  <% end %><br>

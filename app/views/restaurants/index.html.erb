@@ -15,7 +15,7 @@
       <%= restaurant.category.name%>
       <%= restaurant.description %>
       <%= link_to 'Read More', restaurant_path(restaurant) %>
-
+      評論數：<%= restaurant.comments.count %>
     </li>
   <% end %>
 </ul>
