@@ -1,0 +1,5 @@
+<% if restaurant.find_my_favorite(current_user) %>
+  <%= link_to "UnFavorite", unfavorite_restaurant_path(restaurant), :method => :post %>
+<% else %>
+  <%= link_to "Favorite", favorite_restaurant_path(restaurant), :method => :post %>
+<% end %>

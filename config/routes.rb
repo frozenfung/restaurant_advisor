@@ -11,6 +11,10 @@ Rails.application.routes.draw do
 
   resources :restaurants do
     resources :comments
+    member do
+      post :favorite
+      post :unfavorite
+    end
   end
 
   resources :categories do

@@ -11,6 +11,7 @@
   <% @restaurants.each do |restaurant| %>
     <li>
       <h2><%= restaurant.name %></h2>
+      <%= render :partial => 'favorites', :locals => { :restaurant => restaurant } %>
       <%= image_tag(restaurant.image, :width => 250) %>
       <%= restaurant.category.name%>
       <%= restaurant.description %>
@@ -19,5 +20,8 @@
     </li>
   <% end %>
 </ul>
+
+
+
 
   <%= paginate @restaurants %>
