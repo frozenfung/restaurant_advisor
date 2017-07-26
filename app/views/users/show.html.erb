@@ -15,3 +15,8 @@
     <h4>餐廳名稱: <%= comment.restaurant.name %> 餐廳，
         留言內容: <%= comment.comment %> ，留言日期：<%= comment.created_at %></h4>
   <% end %>
+  <hr>
+  <h3>你收藏的餐廳，總共有<%= @favorites.count %>間</h3>
+  <% @favorites.each do |favorite| %>
+    <h4>餐廳名稱: <%= favorite.restaurant.name %> 餐廳
+  <% end %>

@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   def show
     @restaurants = current_user.restaurants
     @comments = current_user.comments
+    @favorites = current_user.favorites
   end
 
   def edit
