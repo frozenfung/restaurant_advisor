@@ -10,6 +10,12 @@ class RestaurantsController < ApplicationController
   def show
   end
 
+  # GET /restaurants/dashboard
+  def dashboard
+    @restaurants = Restaurant.order(comments_count: :desc).limit(10)
+
+  end
+
   # POST /restaurants/:id/favorite
   def favorite
     @restaurant = Restaurant.find( params[:id] )

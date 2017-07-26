@@ -1,0 +1,6 @@
+<h1>Top 10 人氣餐廳(評論數最高)</h1>
+
+  <% @restaurants.each do |restaurant| %>
+    <h2><%= restaurant.name %> 餐廳，
+        評論數：<%= restaurant.comments.count %></h2>
+  <% end %>

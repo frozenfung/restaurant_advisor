@@ -15,6 +15,9 @@ Rails.application.routes.draw do
       post :favorite
       post :unfavorite
     end
+    collection do
+      get :dashboard
+    end
   end
 
   resources :categories do
