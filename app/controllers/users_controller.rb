@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   before_action :set_user, :only => [ :show, :edit, :update ]
 
   def show
+    @restaurants = current_user.restaurants
+    @comments = current_user.comments
   end
 
   def edit
