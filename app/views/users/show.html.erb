@@ -1,0 +1,10 @@
+  <h2>Profile</h2>
+  <br>
+  <p><%= image_tag(@user.file_location, :width => 250) %></p>
+
+  <h2><%= @user.firstname %> <%= @user.lastname %></h2>
+  <p>自我介紹</p>
+  <p><%= @user.introself %></p>
+  <br>
+
+  <%= link_to 'Edit Profile', edit_user_path(@user) %>

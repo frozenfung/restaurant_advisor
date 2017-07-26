@@ -39,6 +39,9 @@ gem 'kaminari'
 #假資料
 gem 'ffaker'
 
+#上傳照片
+gem 'carrierwave'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

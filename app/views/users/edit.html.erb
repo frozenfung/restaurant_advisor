@@ -1,0 +1,13 @@
+<h3>Edit Profile</h3>
+  <%= form_for @user, :url => { :controller => 'users', :action => 'update', :id => @user } do |f| %>
+    <%= f.label :file_location, "大頭照上傳" %>
+    <%= f.file_field :file_location %><br>
+    <h2><%= f.label :firstname, "First Name" %>
+    <%= f.text_field :firstname %>
+    <%= f.label :lastname, "Last Name" %>
+    <%= f.text_field :lastname %></h2> <br>
+    <%= f.label :introself, "自我介紹" %>
+    <%= f.text_area :introself %> <br>
+
+    <%= f.submit "Update" %>
+  <% end %>

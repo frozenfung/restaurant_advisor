@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :favorited_restaurants, :through => :favorites, :source => :restaurant
   has_many :comments
 
-
+  mount_uploader :file_location, PhotoImageUploader 
 
 
   def admin?
