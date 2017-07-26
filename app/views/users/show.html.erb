@@ -9,6 +9,7 @@
 
   <%= link_to 'Edit Profile', edit_user_path(@user) %>
   <hr>
+  <h3>自己評論餐廳數：<%= @comments.count %></h3>
   <h3>你曾經留言評論的餐廳</h3>
   <% @comments.each do |comment| %>
     <h4>餐廳名稱: <%= comment.restaurant.name %> 餐廳，
