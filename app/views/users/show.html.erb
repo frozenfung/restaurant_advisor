@@ -1,7 +1,13 @@
   <h2>Profile</h2>
   <br>
   <p><%= image_tag(@user.file_location, :width => 250) %></p>
-
+    <% if current_user != @user %>
+      <% if current_user.following?(@user) %>
+        <%= button_to 'Unfollow', friendship_path(id: @user.id), method: :delete %>
+      <% else %>
+        <%= button_to 'Follow', friendships_path(id: @user.id) %>
+      <% end %>
+    <% end %>
   <h2><%= @user.firstname %> <%= @user.lastname %></h2>
   <p>自我介紹</p>
   <p><%= @user.introself %></p>
