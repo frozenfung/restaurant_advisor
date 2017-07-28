@@ -5,6 +5,7 @@ class Restaurant < ApplicationRecord
   has_many :favorites, :dependent => :destroy
   has_many :favorited_users, :through => :favorites, :source => :user
   has_many :comments, ->{ order("id DESC")}
+  has_one :location # 單數
 
   def find_my_favorite(user)
     if user
