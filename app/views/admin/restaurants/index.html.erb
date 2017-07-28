@@ -4,7 +4,7 @@
 <% @restaurants.each do |restaurant| %>
   <li>
  	  <%= restaurant.name %>
-
+    <%= link_to 'Location',  admin_restaurant_location_path(restaurant) %>
     <%= link_to 'Show', :controller => 'admin/restaurants', :action => 'show', :id => restaurant %>
     <%= link_to 'Edit', :controller => 'admin/restaurants', :action => 'edit', :id => restaurant %>
     <%= link_to 'Delete', admin_restaurant_path(restaurant),method: :delete, data:{ confirm:"Are you sure?"}, :id => restaurant %>

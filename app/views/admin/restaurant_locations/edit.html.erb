@@ -1,0 +1,5 @@
+<h3>Edit Location</h3>
+  <%= form_for @location, :url => { :controller => 'admin/restaurant_locations', :action => 'update', :id => @restaurant } do |f| %>
+    <%= render :partial => 'form', :locals => { :f => f } %>
+    <%= f.submit "Update" %>
+  <% end %>

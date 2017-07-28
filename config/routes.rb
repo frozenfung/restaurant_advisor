@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   root :to => "restaurants#index"
 
   namespace :admin do
-    resources :restaurants
+    resources :restaurants do
+      resource :location, :controller => 'restaurant_locations'
+    end
     resources :categories
   end
 

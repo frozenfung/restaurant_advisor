@@ -1,0 +1,9 @@
+<h1><%= @restaurant.name %></h1>
+
+  <% if @restaurant.location %>
+    <p><%= @restaurant.location.location %></p>
+    <p><%= link_to "edit", edit_admin_restaurant_location_path(@restaurant) %></p>
+    <p><%= link_to "destroy", admin_restaurant_location_path(@restaurant), :method => :delete %></p>
+  <% else %>
+    <p><%= link_to "Add location", new_admin_restaurant_location_path(@restaurant) %></p>
+  <% end %>

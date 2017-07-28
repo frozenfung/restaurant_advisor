@@ -1,0 +1,6 @@
+<h3>Add New Location</h3>
+
+  <%= form_for @location, :url => { :controller => 'admin/restaurant_locations', :action => 'create' } do |f| %>
+    <%= render :partial => 'form', :locals => { :f => f } %>
+    <%= f.submit "Create" %>
+  <% end %>
