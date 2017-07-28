@@ -26,3 +26,13 @@
   <% @favorites.each do |favorite| %>
     <h4>餐廳名稱: <%= favorite.restaurant.name %> 餐廳
   <% end %>
+  <hr>
+  <h3>你追蹤的名單</h3>
+  <% @followings.each do |following| %>
+    <h4>名稱: <%= following.firstname %>
+  <% end %>
+  <hr>
+  <h3>追蹤你的粉絲</h3>
+  <% @followers.each do |follower| %>
+    <h4>名稱: <%= follower.firstname %>
+  <% end %>

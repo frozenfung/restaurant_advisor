@@ -6,6 +6,8 @@ class UsersController < ApplicationController
     @restaurants = current_user.restaurants
     @comments = current_user.comments
     @favorites = current_user.favorites
+    @followings = current_user.following
+    @followers = current_user.followers
   end
 
   def edit
