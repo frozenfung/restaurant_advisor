@@ -12,8 +12,10 @@
   <p>自我介紹</p>
   <p><%= @user.introself %></p>
   <br>
+    <% if @user.email == current_user.email %>
+      <%= link_to 'Edit Profile', edit_user_path(@user) %>
+    <% end %>
 
-  <%= link_to 'Edit Profile', edit_user_path(@user) %>
   <hr>
   <h3>自己評論餐廳數：<%= @comments.count %></h3>
   <h3>你曾經留言評論的餐廳</h3>
