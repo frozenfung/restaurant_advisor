@@ -1,5 +1,8 @@
   <h2>Profile</h2>
   <br>
+  <div class="container">
+
+
   <p><%= image_tag(@user.file_location, :width => 250) %></p>
     <% if current_user != @user %>
       <% if current_user.following?(@user) %>
@@ -19,22 +22,28 @@
   <hr>
   <h3>自己評論餐廳數：<%= @comments.count %></h3>
   <h3>你曾經留言評論的餐廳</h3>
+
   <% @comments.each do |comment| %>
     <h4>餐廳名稱: <%= comment.restaurant.name %> 餐廳，
         留言內容: <%= comment.comment %> ，留言日期：<%= comment.created_at %></h4>
   <% end %>
+
   <hr>
   <h3>你收藏的餐廳，總共有<%= @favorites.count %>間</h3>
   <% @favorites.each do |favorite| %>
     <h4>餐廳名稱: <%= favorite.restaurant.name %> 餐廳
   <% end %>
+
   <hr>
   <h3>你追蹤的名單</h3>
   <% @followings.each do |following| %>
     <h4>名稱: <%= following.firstname %>
   <% end %>
+
   <hr>
   <h3>追蹤你的粉絲</h3>
   <% @followers.each do |follower| %>
     <h4>名稱: <%= follower.firstname %>
   <% end %>
+
+    </div>

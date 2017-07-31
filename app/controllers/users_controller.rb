@@ -3,11 +3,10 @@ class UsersController < ApplicationController
   before_action :set_user, :only => [ :show, :edit, :update ]
 
   def show
-    @restaurants = current_user.restaurants
-    @comments = current_user.comments
-    @favorites = current_user.favorites
-    @followings = current_user.following
-    @followers = current_user.followers
+    @comments = @user.comments
+    @favorites = @user.favorites
+    @followings = @user.following
+    @followers = @user.followers
   end
 
   def edit

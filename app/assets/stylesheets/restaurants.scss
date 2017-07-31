@@ -1,3 +1,81 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.clearfix:after {
+ content:"";
+ display: table;
+ clear: both;
+}
+.category{
+  margin-top:20px;
+  margin-bottom:20px;
+  font-size:30px;
+
+}
+
+.category a{
+  text-decoration-line: none;
+  font-size: 20px;
+  border: 1px solid #008D14;
+  border-radius: 5px;
+  text-align: center;
+  padding:5px;
+  margin:4px;
+  color:#008D14;
+}
+
+.category a:hover{
+  color:#E73C3C;
+  border: 1px solid #E73C3C;
+}
+
+.container {
+  border: 3px solid #D9EEEE;
+  border-radius: 5px;
+  margin:5px;
+}
+
+.container a{
+  text-decoration-line: none;
+  border: 1px solid #E73C3C;
+  border-radius: 5px;
+  color:#E73C3C;
+  padding:2px;
+}
+
+.container li{
+  list-style: none;
+}
+
+.clearfix img{
+  float:left;
+}
+
+.paginate {
+
+}
+
+.paginate a{
+  text-decoration-line: none;
+}
+
+.category-restaurants{
+  text-align: center;
+  border: 3px solid #D9EEEE;
+  border-radius: 5px;
+  margin:5px;
+  float:left;
+}
+
+.category-restaurants a{
+  text-decoration-line: none;
+  border: 1px solid #E73C3C;
+  border-radius: 5px;
+  color:#E73C3C;
+  padding:2px;
+}
+
+.category-restaurants li{
+  list-style: none;
+}
