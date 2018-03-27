@@ -14,6 +14,7 @@ class RestaurantsController < ApplicationController
   def dashboard
     @restaurants = Restaurant.order(comments_count: :desc).limit(10)
 
+    @user_count = User.get_user_count
   end
 
   # POST /restaurants/:id/favorite
